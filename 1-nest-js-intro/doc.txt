@@ -1,0 +1,24 @@
+App start
+|---> main.ts
+	|-->start of server	    |---> other modules
+	|-->app.module.ts-----------|---> controllers
+	|-->other configurations    |---> providers 	
+
+
+Module:
+Modularity--> Modules break down the application into smaller, self-contained units, making it easier to manage and understand
+
+Dependency Injection--> NestJS uses dependency injections to provide modules with necessory dependencies, promoting loose coupling and testability.
+
+providers--> Providers can be services, controllers, or other classes that are managed by the module.
+
+Exports--> Modules can export providers and other components that can be used by other modules
+
+//--->if we are creating a module file:
+
+Module:
+users.module.ts
+	|--> controller (users.controller.ts)--> responsible for to storing logic and handle recieves the request and respond them( not the complete business logic under the controller file)
+	|--> service (users.service.ts) --> this service file is responsible for storing the complete business logic for each type of request,
+	|--> Test file (users.controller.spec.ts)--> it is the test file which contains the test logic for the controller
+	|--> model (user.entity.ts)--> schema file
